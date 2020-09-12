@@ -1,0 +1,46 @@
+[
+  {
+    "name" : "MyClass",
+    "objectType" : "Class",
+    "properties" : [
+      {
+        "name" : "field1",
+        "value" : {
+          "type" : "String",
+          "wrappers": ["ByValue"]
+        },
+        "accessLevel" : "Private"
+      },{
+        "name" : "field2",
+        "value" : {
+          "type" : "Integer",
+          "wrappers": ["ByValue"]
+        },
+        "accessLevel" : "Private"
+      },{
+        "name" : "field3",
+        "value" : {
+          "type" : "Float",
+          "wrappers": ["ByValue"]
+        },
+        "accessLevel" : "Public"
+      }
+    ],
+    "methods" : [
+      {
+        "name" : "method1",
+        "accessLevel": "Private",
+        "arguments": [{
+          "type": "Integer",
+          "name": "number",
+          "wrappers": ["ByReference"]
+        }],
+        "return": {
+          "type": "Integer",
+          "wrappers": ["ByReference"]
+        },
+        "modifiers": ["Virtual", "Const", "Method"]
+      }
+    ]
+  }
+]

@@ -1,0 +1,29 @@
+[
+  {
+    "objectType": "function",
+    "name" : "method1",
+    "arguments": [],
+    "return": {
+      "name": "",
+      "type": "String"
+    },
+    "modifiers": [ "PureVirtual","Virtual", "Const"]
+  },
+  {
+  "objectType": "function",
+  "name" : "method1",
+  "arguments": [{
+        "name": "first",
+        "type": "UnsignedInteger"
+      },
+        {
+        "name": "second",
+        "type": "String"
+      }],
+  "return": {
+    "name": "",
+    "type": "Integer"
+  },
+  "modifiers": ["Virtual", "Const"]
+}
+]
