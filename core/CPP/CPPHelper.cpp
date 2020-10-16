@@ -31,3 +31,9 @@ std::string CPPHelper::parseFunctionModifier(FunctionModifier fm) {
             return "static";
     }
 }
+
+CPPHelper::CPPHelper() {
+    knownDeps = {
+            {ValueType::String, "#include <string>"}
+    };
+}

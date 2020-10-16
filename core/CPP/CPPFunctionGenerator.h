@@ -6,7 +6,7 @@
 #define CODEGENERATOR_CPPFUNCTIONGENERATOR_H
 
 
-#include "FunctionGenerator.h"
+#include "../generator/FunctionGenerator.h"
 
 class CPPFunctionGenerator : public FunctionGenerator {
 public:

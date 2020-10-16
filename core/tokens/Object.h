@@ -13,6 +13,8 @@ struct Object {
 public:
     virtual std::string getName() const = 0;
     virtual ObjectType getType() const = 0;
+    virtual std::vector<ValueType> getAllUsableTypes() const = 0;
+
     AccessLevelType accessLevel;
 };
 

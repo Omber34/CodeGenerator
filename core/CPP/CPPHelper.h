@@ -6,13 +6,19 @@
 #define CODEGENERATOR_CPPHELPER_H
 
 
-#include "LanguageHelper.h"
+#include "../generator/LanguageHelper.h"
+#include <unordered_map>
 
 class CPPHelper : public LanguageHelper {
 public:
+    CPPHelper();
+
     std::string parseValueType(ValueType vt) override;
 
     std::string parseFunctionModifier(FunctionModifier fm) override;
+
+private:
+    std::unordered_map<ValueType, std::string> knownDeps;
 };
 
 

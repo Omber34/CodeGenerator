@@ -18,6 +18,8 @@ struct Function : public Object
 
     std::weak_ptr<Object> owner;
 
+    std::vector<ValueType> getAllUsableTypes() const override;
+
     bool operator==(const Function &rhs) const;
 
     bool operator!=(const Function &rhs) const;

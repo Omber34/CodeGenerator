@@ -6,7 +6,7 @@
 #define CODEGENERATOR_CPPCLASSGENERATOR_H
 
 
-#include "ClassGenerator.h"
+#include "../generator/ClassGenerator.h"
 
 class CPPClassGenerator : public ClassGenerator {
 public:

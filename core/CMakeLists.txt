@@ -29,7 +29,7 @@ set(SRC
         "../3rd party/fmt/src/format.cc"
         "../3rd party/fmt/src/os.cc"
 
-        generator/LanguageHelper.h generator/CPPHelper.cpp generator/CPPHelper.h generator/CPPFunctionGenerator.cpp generator/CPPFunctionGenerator.h enums/LanguageType.h tokens/Namespace.h tokens/Object.h enums/ObjectType.h generator/ClassGenerator.h generator/CPPClassGenerator.cpp generator/CPPClassGenerator.h enums/ValueWrapperType.h)
+        generator/LanguageHelper.h CPP/CPPHelper.cpp CPP/CPPHelper.h CPP/CPPFunctionGenerator.cpp CPP/CPPFunctionGenerator.h enums/LanguageType.h tokens/Namespace.h tokens/Object.h enums/ObjectType.h generator/ClassGenerator.h CPP/CPPClassGenerator.cpp CPP/CPPClassGenerator.h enums/ValueWrapperType.h CPP/DependencyResolver.cpp CPP/DependencyResolver.h CPP/CPPCodeGenerator.cpp CPP/CPPCodeGenerator.h CPP/DependencyList.cpp CPP/DependencyList.h)
 
 add_library(core ${SRC})
 

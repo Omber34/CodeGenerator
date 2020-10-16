@@ -20,3 +20,11 @@ std::string Function::getName() const {
 ObjectType Function::getType() const {
     return ObjectType::Function;
 }
+
+std::vector<ValueType> Function::getAllUsableTypes() const {
+    std::vector<ValueType> result;
+    result.push_back(returnValue.type);
+    for (auto && arg : arguments)
+        result.push_back(arg.type);
+    return result;
+}

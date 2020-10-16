@@ -1,7 +1,7 @@
 #include <iostream>
 #include "core/parser/JsonParser.h"
-#include "core/generator/CPPFunctionGenerator.h"
-#include "core/generator/CPPClassGenerator.h"
+#include "core/CPP/CPPFunctionGenerator.h"
+#include "core/CPP/CPPClassGenerator.h"
 
 int main()
 {

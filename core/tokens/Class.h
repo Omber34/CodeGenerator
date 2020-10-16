@@ -1,4 +1,6 @@
-#pragma once 
+#pragma once
+
+
 #include <unordered_set>
 #include "Property.h"
 #include "Function.h"
@@ -17,4 +19,6 @@ struct Class : public Object
     std::weak_ptr<Object> owner;
 
     std::string getName() const override;
+
+    std::vector<ValueType> getAllUsableTypes() const override;
 };
