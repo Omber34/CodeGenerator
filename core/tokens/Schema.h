@@ -11,6 +11,7 @@
 
 struct Schema {
     std::vector<std::shared_ptr<Object>> objects;
+    std::unordered_set<ValueType> getAllDeclareTypes();
 };
 
 

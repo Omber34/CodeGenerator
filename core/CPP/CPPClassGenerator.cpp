@@ -57,7 +57,7 @@ std::string CPPClassGenerator::generatePublic(const Class &obj) const {
 }
 
 std::string CPPClassGenerator::generateProperty(const Property &prop) const {
-    return fmt::format(propertyPattern, language->parseValueType(prop.value.type), prop.name);
+    return fmt::format(propertyPattern, prop.value.type, prop.name);
 }
 
 std::string CPPClassGenerator::generateAccessType(const Class &obj, AccessLevelType accessType) const {

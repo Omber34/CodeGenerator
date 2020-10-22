@@ -23,8 +23,6 @@ private:
     void generate();
 
 private:
-
-
     std::unique_ptr<FileGenerator> fileGenerator;
     std::unique_ptr<DependencyResolver> dependencyResolver;
     std::vector<std::string> fileList;

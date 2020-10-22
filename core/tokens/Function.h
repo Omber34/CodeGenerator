@@ -18,7 +18,9 @@ struct Function : public Object
 
     std::weak_ptr<Object> owner;
 
-    std::vector<ValueType> getAllUsableTypes() const override;
+    std::unordered_set<ValueType> getAllUsableTypes() const override;
+
+    std::unordered_set<std::string> getAllDeclareTypes() const override;
 
     bool operator==(const Function &rhs) const;
 

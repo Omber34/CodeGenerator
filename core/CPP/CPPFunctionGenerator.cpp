@@ -12,7 +12,7 @@ std::string CPPFunctionGenerator::generateBody(const Function &func) {
 
 std::string CPPFunctionGenerator::generateArgString(const FunctionArgument &arg)
 {
-    return  fmt::format("{} {}", language->parseValueType(arg.type), arg.name);
+    return  fmt::format("{} {}", arg.type, arg.name);
 }
 
 std::string CPPFunctionGenerator::generateArgumentString(const Function &func) {
@@ -89,7 +89,7 @@ std::string CPPFunctionGenerator::generateFunction(const Function &func) {
     std::string result;
     result = fmt::format(functionPattern,
                          generateForwardMods(func),
-                         language->parseValueType(func.returnValue.type),
+                         func.returnValue.type,
                          generateFullName(func),
                          generateArgumentString(func),
                          generateBackMods(func),

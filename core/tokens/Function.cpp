@@ -21,10 +21,14 @@ ObjectType Function::getType() const {
     return ObjectType::Function;
 }
 
-std::vector<ValueType> Function::getAllUsableTypes() const {
-    std::vector<ValueType> result;
-    result.push_back(returnValue.type);
+std::unordered_set<ValueType> Function::getAllUsableTypes() const {
+    std::unordered_set<ValueType> result;
+    result.insert(returnValue.type);
     for (auto && arg : arguments)
-        result.push_back(arg.type);
+        result.insert(arg.type);
     return result;
+}
+
+std::unordered_set<std::string> Function::getAllDeclareTypes() const {
+    return std::unordered_set<std::string>();
 }

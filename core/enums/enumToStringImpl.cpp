@@ -50,18 +50,19 @@ std::string classTypeToStr(ClassType fm)
 
 std::string valueTypeToStr(ValueType fm)
 {
-    switch (fm) {
-        case ValueType::Integer:
-            return "Integer";
-        case ValueType::UnsignedInteger:
-            return "UnsignedInteger";
-        case ValueType::String:
-            return "String";
-        case ValueType::Bool:
-            return "Bool";
-        case ValueType::Float:
-            return "Float";
-    }
+    return fm;
+//    switch (fm) {
+//        case ValueType::Integer:
+//            return "Integer";
+//        case ValueType::UnsignedInteger:
+//            return "UnsignedInteger";
+//        case ValueType::String:
+//            return "String";
+//        case ValueType::Bool:
+//            return "Bool";
+//        case ValueType::Float:
+//            return "Float";
+//    }
 }
 
 std::string languageTypeToStr(LanguageType fm)

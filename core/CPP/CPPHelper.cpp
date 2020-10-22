@@ -5,18 +5,19 @@
 #include "CPPHelper.h"
 
 std::string CPPHelper::parseValueType(ValueType vt) {
-    switch (vt) {
-        case ValueType::Integer:
-            return "int";
-        case ValueType::UnsignedInteger:
-            return "unsigned int";
-        case ValueType::String:
-            return "std::string";
-        case ValueType::Bool:
-            return "bool";
-        case ValueType::Float:
-            return "float";
-    }
+    return vt;
+//    switch (vt) {
+//        case ValueType::Integer:
+//            return "int";
+//        case ValueType::UnsignedInteger:
+//            return "unsigned int";
+//        case ValueType::String:
+//            return "std::string";
+//        case ValueType::Bool:
+//            return "bool";
+//        case ValueType::Float:
+//            return "float";
+//    }
 }
 
 std::string CPPHelper::parseFunctionModifier(FunctionModifier fm) {
@@ -34,6 +35,6 @@ std::string CPPHelper::parseFunctionModifier(FunctionModifier fm) {
 
 CPPHelper::CPPHelper() {
     knownDeps = {
-            {ValueType::String, "#include <string>"}
+            {"std::string", "#include <string>"}
     };
 }

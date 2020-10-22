@@ -6,7 +6,7 @@
 
 struct Value
 {
-    ValueType type;
+    std::string type;
     std::vector<ValueWrapperType> wrappers;
 
     bool operator==(const Value &rhs) const;
@@ -24,7 +24,8 @@ namespace std{
     template <>
     struct hash<Value>{
         size_t operator()(const Value& func) const{
-            auto result = static_cast<size_t>(func.type);
+//            auto result = static_cast<size_t>(func.type);
+            auto result = std::hash<std::string>()(func.type);
             for (auto wrap : func.wrappers) {
                 result ^= static_cast<size_t>(wrap);
             }

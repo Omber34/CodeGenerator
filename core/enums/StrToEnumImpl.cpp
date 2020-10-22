@@ -46,17 +46,18 @@ ClassType strToClassType(const std::string &str) {
 }
 
 ValueType strToValueType(const std::string &str) {
-    if (str == "Integer"){
-        return ValueType::Integer;
-    } if (str == "UnsignedInteger"){
-        return ValueType::UnsignedInteger;
-    }if (str == "String"){
-        return ValueType::String;
-    }if (str == "Bool"){
-        return ValueType::Bool;
-    }if (str == "Float"){
-        return ValueType::Float;
-    } else throw std::logic_error("wrong string value type");
+    return str;
+//    if (str == "Integer"){
+//        return ValueType::Integer;
+//    } if (str == "UnsignedInteger"){
+//        return ValueType::UnsignedInteger;
+//    }if (str == "String"){
+//        return ValueType::String;
+//    }if (str == "Bool"){
+//        return ValueType::Bool;
+//    }if (str == "Float"){
+//        return ValueType::Float;
+//    } else throw std::logic_error("wrong string value type");
 }
 
 

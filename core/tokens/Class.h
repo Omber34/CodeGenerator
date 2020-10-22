@@ -20,5 +20,7 @@ struct Class : public Object
 
     std::string getName() const override;
 
-    std::vector<ValueType> getAllUsableTypes() const override;
+    std::unordered_set<std::string> getAllDeclareTypes() const override;
+
+    std::unordered_set<ValueType> getAllUsableTypes() const override;
 };
