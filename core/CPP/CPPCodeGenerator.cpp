@@ -24,7 +24,7 @@ void CPPCodeGenerator::resolveFileList() {
         }
         if (auto func = std::dynamic_pointer_cast<Function>(symbol)) {
             auto funcMods = func->modifiers;
-            if (std::find(funcMods.begin(), funcMods.end(), FunctionModifier::Static) != funcMods.end())
+            if (!hasStaticFunctions || std::find(funcMods.begin(), funcMods.end(), FunctionModifier::Static) != funcMods.end())
                 hasStaticFunctions = true;
         }
     }
