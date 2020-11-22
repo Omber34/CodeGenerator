@@ -7,11 +7,11 @@
       "name": "",
       "type": "String"
     },
-    "modifiers": [ "PureVirtual","Virtual", "Const"]
+    "modifiers": ["PureVirtual", "Virtual", "Const"]
   },
   {
   "objectType": "function",
-  "name" : "method1",
+  "name" : "method2",
   "arguments": [{
         "name": "first",
         "type": "UnsignedInteger"

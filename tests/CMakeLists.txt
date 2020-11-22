@@ -8,4 +8,4 @@ add_executable(tests ${TEST_SRC})
 target_include_directories(tests PUBLIC lib/googletest-master/googletest/include)
 target_include_directories(tests PUBLIC lib/googletest-master/googlemock/include)
 
-target_link_libraries(tests gtest gtest_main)
+target_link_libraries(tests gtest gtest_main core)
