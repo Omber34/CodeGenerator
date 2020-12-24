@@ -13,9 +13,11 @@ Value parseValue(rapidjson::Value const & object)
 {
     Value result;
     result.type = strToValueType(object["type"].GetString());
-    auto wrappers = object["wrappers"].GetArray();
-    for (rapidjson::SizeType i = 0; i < wrappers.Size(); ++i)
-        result.wrappers.push_back(strToValueWrapperType(wrappers[i].GetString()));
+    if (object.HasMember("wrappers")) {
+        auto wrappers = object["wrappers"].GetArray();
+        for (rapidjson::SizeType i = 0; i < wrappers.Size(); ++i)
+            result.wrappers.push_back(strToValueWrapperType(wrappers[i].GetString()));
+    }
     return result;
 }
 
@@ -23,9 +25,11 @@ FunctionArgument parseFunctionArgument(const rapidjson::Value & object)
 {
     FunctionArgument result;
     result.type = strToValueType(object["type"].GetString());
-    auto wrappers = object["wrappers"].GetArray();
-    for (rapidjson::SizeType i = 0; i < wrappers.Size(); ++i)
-        result.wrappers.push_back(strToValueWrapperType(wrappers[i].GetString()));
+    if (object.HasMember("wrappers")) {
+        auto wrappers = object["wrappers"].GetArray();
+        for (rapidjson::SizeType i = 0; i < wrappers.Size(); ++i)
+            result.wrappers.push_back(strToValueWrapperType(wrappers[i].GetString()));
+    }
 
     if (object.HasMember("defaultValue"))
         result.defaultValue = object["defaultValue"].GetString();

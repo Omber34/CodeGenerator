@@ -47,3 +47,21 @@ TEST(FunctionGenerateTest, FunctionParsing) {
     EXPECT_EQ(firstFunc->modifiers, (std::vector<FunctionModifier>{FunctionModifier::PureVirtual, FunctionModifier::Virtual, FunctionModifier::Const}));
     EXPECT_EQ(secondFunc->modifiers, (std::vector<FunctionModifier>{FunctionModifier::Virtual, FunctionModifier::Const}));
 }
+
+TEST(ClassGenerateTest, ParsingClassJson) {
+    JsonParser parser("../../tests/samples/schema.json");
+    auto functions = parser.getSchema();
+    auto firstFunc = std::dynamic_pointer_cast<Function>(functions.objects[0]);
+    auto secondFunc = std::dynamic_pointer_cast<Function>(functions.objects[1]);
+
+    EXPECT_TRUE(firstFunc);
+    EXPECT_TRUE(secondFunc);
+
+    EXPECT_EQ(functions.objects.size(), 2);
+
+    EXPECT_EQ(firstFunc->getType(), ObjectType::Function);
+    EXPECT_EQ(secondFunc->getType(), ObjectType::Function);
+
+    EXPECT_STREQ(firstFunc->getName().c_str(), "method1");
+    EXPECT_STREQ(secondFunc->getName().c_str(), "method2");
+}

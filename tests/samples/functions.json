@@ -1,6 +1,6 @@
 [
   {
-    "objectType": "function",
+    "objectType": "Function",
     "name" : "method1",
     "arguments": [],
     "return": {
@@ -10,7 +10,7 @@
     "modifiers": ["PureVirtual", "Virtual", "Const"]
   },
   {
-  "objectType": "function",
+  "objectType": "Function",
   "name" : "method2",
   "arguments": [{
         "name": "first",
